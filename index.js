@@ -3,10 +3,9 @@ const assert = require('assert');
 const dboper = require('./operations');
 const vars = require('./vars');
 
-const url = vars.MONGO_URL;
 const dbname = 'conFusion';
 
-MongoClient.connect(url).then((client) => {
+MongoClient.connect(vars.MONGO_URL).then((client) => {
     console.log('Connected correctly to server');
 
     const db = client.db(dbname);
